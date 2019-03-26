@@ -1,0 +1,47 @@
+<h4>Admin or Employee sign-up:</h4>
+{{#if errors}}
+  {{#each errors}}
+    <div class="error">{{msg}}</div>
+  {{/each}}
+{{/if}}
+
+{{#if user}}
+<p>You are already logged in, please continue working on expenses...</p>
+{{else}}
+<form action="/users/registration" method="post">
+  <div class='form-group'>
+    <label>Username: </label><br>
+  <input class='form-control' type="text" name="username"></div>
+  <br>
+  <div class='form-group'>
+    <label>Password: </label><br>
+  <input class='form-control' type="password" name="password"></div>
+  <br>
+  <div class='form-group'>
+    <label>Confirm password: </label><br>
+  <input class='form-control' type="password" name="confirmPassword"></div>
+  <br>
+  <div class='form-group'>
+    <label>Type: </label><br>
+        <select class="for-control" name="type">
+            <option value="Employee">Employee</option>
+            <option value="Admin">Admin</option>
+        </select>
+  </div>
+  <br/>
+  <div class='form-group'>
+    <label>First Name: </label><br>
+  <input class='form-control' type="text" name="first_name"></div>
+  <br>
+  <div class='form-group'>
+    <label>Last Name: </label><br>
+  <input class='form-control' type="text" name="last_name"></div>
+  <br>
+  <div class='form-group'>
+    <label>Address: </label><br>
+  <textarea class= form-control name="address"></textarea>
+  </div>
+  <br>
+  <input class='button' type="submit" value="Submit">
+</form>
+{{/if}}

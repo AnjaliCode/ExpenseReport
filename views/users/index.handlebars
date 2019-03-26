@@ -1,0 +1,74 @@
+{{#if user}}
+
+<div class="col_8">
+<h4>Welcome to user page. Hello, {{user.username}}</h4>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis</p>
+<a href="/users/add">
+  <input class='button' type="submit" value="Create new expense">
+</a>
+</div>
+
+  {{#if expenses}}
+  <table style="width:100%">
+    <tr>
+      <th>Username</th>
+      <th>Type</th>
+      <th>Time</th>
+      <th>Amount</th>
+      <th>Currency</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+    </tr>
+    {{#each expenses}}
+    <tr>
+      <td>{{username}}</td>
+      <td>{{type}}</td>
+      <td>{{Time}}</td>
+      <td>{{amount}}</td>
+      <td>{{currency}}</td>
+      <td>{{description}}</td>
+      <td>
+        <a href="/users/edit/{{_id}}">
+          <input class='button' type="submit" value="Edit">
+        </a>
+      </td>
+      <td>
+        <a href="/users/delete/{{_id}}">
+        <input class='button' type="submit" value="Delete">
+      </a>
+      </td>
+    </tr>
+    {{/each}}
+
+  </table>
+  {{else}}
+    <div class="col_8">
+      <p>There are no expenses, you might need to create expenses to view them. </p>
+    </div>
+  {{/if}} <!-- for expenses -->
+{{else}}
+<p><img class="align-left" src="/images/finances.jpg" width="180" height="150" />
+<h1>Unauthorized Access!</h1>
+<h3>This is an error page, please login to continue....</h3>
+
+  <br><br><br><br><br>
+  <br><br><br><br><br>
+
+  <strong>ullamcorper suscipit lobortis</strong> nisl ut aliquip ex ea commodo consequat.
+  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat</p>
+
+  <p>El illum dolore eu <span class="icon" data-icon="2"></span> feugiat nulla facilisis at vero eros et accumsan et iusto odio
+  dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam
+  liber tempor cum soluta nobis eleifend option
+  congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+
+  <p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+  magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+  nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+  molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum
+  soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+{{/if}} <!-- for user-->

@@ -1,0 +1,14 @@
+
+{{#if user}}
+    <h3>Welcome back, {{user.username}}</h3>
+    <a href='/users/logout'>Logout</a>
+{{else}}
+    <h4>Employee/Admin Login:</h4>
+    <form action="/users/login" method="post">
+      Username: <input type="text" name="username"><br>
+      Password: <input type="password" name="password"><br>
+    <br>
+      <input class='button' type="submit" value="Submit as Employee"><br><br>
+      <input class='button' type="submit" formaction= "/expenses/login" formmethod= "post" value="Submit as Admin">
+    </form>
+{{/if}}

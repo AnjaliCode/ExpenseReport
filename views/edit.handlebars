@@ -1,0 +1,39 @@
+<h4>Edit the expense:</h4>
+
+</br>
+
+<form action="/expenses/edit/{{expense._id}}" method="post">
+  <div class='form-group'>
+    <label>username: </label><br>
+  <input class='form-control' type="text" name="user" value="{{expense.username}}"></input>
+</div>
+  <br>
+  <div class='form-group'>
+    <label>Type: </label><br>
+        <select class="for-control" name="type">
+            <option value="Admin">Admin</option>
+        </select>
+  </div>
+  <br>
+  <div class='form-group'>
+    <label>Time: </label><br>
+  <input class='form-control' type="text" name="Time">
+</div>
+  <br>
+  <div class='form-group'>
+    <label>Amount: </label><br>
+  <input class='form-control' type="text" name="amount" value="{{expense.amount}}" ></input>
+</div>
+  <br>
+  <div class='form-group'>
+    <label>Currency: </label><br>
+  <input class='form-control' type="text" name="currency" value="{{expense.currency}}" ></input>
+</div>
+  <br>
+  <div class='form-group'>
+    <label>Description: </label><br>
+  <input class='form-control' type="text" name="description" value="{{expense.description}}" ></input>
+</div>
+  <br>
+  <input class='button' type="submit" value="Submit">
+</form>

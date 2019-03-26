@@ -1,0 +1,40 @@
+<h4>Add a new expense:</h4>
+
+{{#if errors}}
+  {{#each errors}}
+    <div class="error">
+        {{msg}}
+    </div>
+  {{/each}}
+{{/if}}
+
+<form action="/expenses/add" method="post">
+  <div class='form-group'>
+    <label>username: </label><br>
+  <input class='form-control' type="text" name="username" value="{{expense.username}}" readonly></div>
+  <br>
+  <div class='form-group'>
+    <label>Type: </label><br>
+        <select class="for-control" name="type">
+            <option value="Admin">Employee</option>
+        </select>
+  </div>
+  <br>
+  <div class='form-group'>
+    <label>Time: </label><br>
+  <input class='form-control' type="text" name="Time"></div>
+  <br>
+  <div class='form-group'>
+    <label>Amount: </label><br>
+  <input class='form-control' type="text" name="amount"></div>
+  <br>
+  <div class='form-group'>
+    <label>Currency: </label><br>
+  <input class='form-control' type="text" name="currency"></div>
+  <br>
+  <div class='form-group'>
+    <label>Description: </label><br>
+  <input class='form-control' type="text" name="description"></div>
+  <br>
+  <input class='button' type="submit" value="Submit">
+</form>
