@@ -32,5 +32,7 @@ manually, it will be unauthorized access to the user.
 6.	Name of the database: Expenses
 7.	Collections to be created: users, expenses
 8.	Please refer to mongoose schema for inputting data directly on mongo shell
+9. To get application running: type on cli at the root of your application: node app.js
+10. To get application running on browser, type in url: localhost:8080
 
 
