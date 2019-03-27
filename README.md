@@ -25,7 +25,7 @@ Instructions:
 
 1.	There is a login partial on the landing page.
 2.	There is a signup link, to sign either as an admin who has access to everybody’s expenses , or an individual user/employee.
-3.	After logging in as one employee, employee can not access other employee’s edit page even if he knows the id eg: while using localhost, if we enter url http://localhost:8080/users/edit/5c967010f70f9facfaac71be
+3.	After logging in as one employee, employee can not access other employee’s edit page even if he knows the id eg: while using localhost, if we enter url http://localhost:8080/users/edit/:id where id is the actual mongo object ID for some other user/employee.
 manually, it will be unauthorized access to the user. 
 4.	Same thing happens if one user decides to delete other user’s expense.
 5.	Mongodb needs to be installed on the system
